@@ -1,14 +1,12 @@
 import argparse
 import numpy as np
 import scipy
-from scipy.linalg import pinv, svd  # Your only additional allowed imports!
-# python assignment3.py -f dt1_train.npy -q 5 -o outfile.txt
+from scipy.linalg import pinv, svd 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Assignment 3",
-                                     epilog="CSCI 4360/6360 Data Science II: Fall 2017",
+    parser = argparse.ArgumentParser(description="Linear Dynamical Systems",
                                      add_help="How to use",
-                                     prog="python assignment3.py <arguments>")
+                                     prog="python LDS.py <arguments>")
     parser.add_argument("-f", "--infile", required=True,
                         help="Dynamic texture file, a NumPy array.")
     parser.add_argument("-q", "--dimensions", required=True, type=int,
